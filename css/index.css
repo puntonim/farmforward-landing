@@ -123,7 +123,6 @@ body {
 }
 
 .picContainer {
-  min-height: 565px;
   background-image: url(../img/potato_transfer.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -135,20 +134,19 @@ body {
 }
 
 .picContainer .detailsContainer .details {
-  margin-left: 64px;
+  margin: 0px 16px 0px 20px;
 }
 
 .title {
   font-family: "MaxLF-Regular";
-  margin-top: 142px;
-  font-size: 3.25em;
+  font-size: 2.5em;
   color: white;
-  line-height: 1.288em;
+  line-height: 1.2;
   letter-spacing: 0.0018px;
+  margin-top: 48px;
 }
 
 .downloadButton {
-  margin-top: 56px;
   background-color: #0058b7;
   border-radius: 6px;
   font-family: "Noto Sans";
@@ -161,35 +159,40 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 320px;
+  margin: 32px 0px 32px 0px;
+  max-width: 100%;
+  text-align: center;
 }
 
 .picContainer .phoneImageContainer {
   background-color: rgba(15, 15, 15, 0.4);
+  display: none;
 }
 
 .phoneImage {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
 }
 
-@media (max-width: 414px) {
+@media (min-width: 768px) {
   .picContainer {
-    min-height: 380px;
+    min-height: 565px;
   }
   .picContainer .phoneImageContainer {
-    visibility: hidden;
+    background-color: rgba(15, 15, 15, 0.4);
+    display: flex;
   }
   .picContainer .detailsContainer .details {
-    margin: 0px 16px 0px 16px;
+    margin: 0px 16px 0px 64px;
   }
   .title {
-    margin-top: 48px;
-    font-size: 40px;
+    font-size: 3.25em;
+    margin-top: 142px;
+    line-height: 1.2;
   }
   .downloadButton {
-    padding: 20px 14px 20px 14px;
-    margin: 32px 0px 32px 0px;
-    max-width: 100%;
+    margin-top: 56px;
+    max-width: 320px;
   }
 }
 
@@ -254,13 +257,14 @@ body {
   line-height: 1;
   letter-spacing: 0.0018px;
   align-self: center;
+  text-align: center;
 }
 
 .informationTile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  margin: 48px 200px 0px 200px;
+  margin: 48px 16px 0px 16px;
 }
 
 .informationImage {
@@ -271,54 +275,46 @@ body {
 .information {
   display: flex;
   flex-direction: column;
-  margin-left: 32px;
 }
 
 .informationTileTitle {
   font-family: "MaxLF-Regular";
-  font-size: 2em;
+  font-size: 1.75em;
   line-height: 1.28;
   letter-spacing: 0.0018px;
   color: #ebd8ce;
+  text-align: center;
+  margin-top: 12px;
 }
 
 .informationTileDescription {
-  margin-top: 12px;
   font-family: "Noto Sans";
   font-size: 1.25em;
   line-height: 1.6;
   color: #ffffff;
   letter-spacing: 0.0018px;
+  text-align: center;
+  margin-top: 12px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .informationTile {
-    margin: 48px 100px 0px 100px;
+    flex-direction: row;
+    margin: 30px 230px 0px 230px;
+    align-items: center;
   }
   .informationTileTitle {
     font-size: 2em;
     line-height: 1.28;
     letter-spacing: 0.0018px;
-  }
-}
-
-@media (max-width: 414px) {
-  .informationTile {
-    flex-direction: column;
-    margin: 48px 0px 0px 0px;
-    text-align: center;
-    padding: 0px 16px 0px 16px;
-  }
-  .informationTileTitle {
-    font-size: 1.75em;
-    line-height: 128%;
-    margin-top: 24px;
+    text-align: left;
   }
   .informationTileDescription {
-    text-align: center;
+    text-align: left;
+    margin-top: 12px;
   }
-  .informationTile .information {
-    margin-left: 0px;
+  .information {
+    margin-left: 32px;
   }
 }
 
@@ -463,4 +459,11 @@ body {
   .primaryAndTermsButton {
     margin: 32px 12px 0px 0px;
   }
+}
+
+.col-xs-0 {
+  flex: 0 0 0;
+  max-width: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
