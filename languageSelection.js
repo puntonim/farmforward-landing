@@ -3,7 +3,7 @@ const data = {
     "Grow better and more profitable potatoes with the farmforward app",
   mainTitleHi: "फार्मफॉरवर्ड ऐप के साथ बेहतर और अधिक लाभदायक आलू उगाएं",
   downloadButtonEn: "Free download for Android",
-  downloadButtonHi: "Android के लिए मुफ्त डाउनलोड",
+  downloadButtonHi: "एंड्रॉयड के लिए मुफ्त डाउनलोड",
   turnYourPhoneEn: "Turn your phone into an agronomist",
   turnYourPhoneHi: "अपने फोन को एग्रोनोमिस्ट में बदल दें",
   turnYourPhoneDescEn:
