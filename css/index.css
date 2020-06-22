@@ -389,7 +389,7 @@ body {
 
 @media (min-width: 768px) {
   .agronomistContainer {
-    padding: 56px 230px 56px 230px;
+    padding: 56px 230px 100px 230px;
   }
   .agronoimistDetailsTitle {
     font-size: 2.5em;
