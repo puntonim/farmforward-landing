@@ -1,31 +1,31 @@
 @font-face {
-  font-family: "MaxLF-Bold";
-  src: url("../fonts/MaxLF-Bold.woff") format("woff"),
-    url("../fonts/MaxLF-Bold.otf") format("otf");
-}
-
-@font-face {
-  font-family: "MaxLF-Book";
-  src: url("../fonts/MaxLF-Book.woff") format("woff"),
-    url("../fonts/MaxLF-Book.otf") format("otf");
-}
-
-@font-face {
-  font-family: "MaxLF-Regular";
-  src: url("../fonts/MaxLF-Regular.woff") format("woff"),
-    url("../fonts/MaxLF-Regular.otf") format("otf");
+  font-family: "Max-Regular";
+  src: url("../fonts/Max-Regular.woff") format("woff"),
+    url("../fonts/Max-Regular.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "Noto Sans";
-  src: url("../fonts/NotoSans-Regular.woff") format("woff"),
-    url("../fonts/NotoSans-Regular.ttf") format("ttf");
+  src: url("../fonts/NotoSans.woff") format("woff"),
+    url("../fonts/NotoSans.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Nato Sans Bold";
+  src: url("../fonts/NotoSans-Bold.woff") format("woff"),
+    url("../fonts/NotoSans-Bold.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "Noto Sans Devanagari UI";
-  src: url("../fonts/NotoSansDevanagariUI-Medium.woff") format("woff"),
-    url("../fonts/NotoSansDevanagariUI-Medium.ttf") format("ttf");
+  src: url("../fonts/NotoSansDevanagariUI-Regular.woff") format("woff"),
+    url("../fonts/NotoSansDevanagariUI-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Noto Sans Devanagari UI Bold";
+  src: url("../fonts/NotoSansDevanagariUI-Bold.woff") format("woff"),
+    url("../fonts/NotoSansDevanagariUI-Bold.ttf") format("ttf");
 }
 
 html,
@@ -37,6 +37,9 @@ body {
   position: relative;
 }
 
+.navbar {
+  padding: 0px 3vw 0px 5vw;
+}
 .navbar .eng {
   font-family: "Noto Sans";
   font-family: Noto Sans;
@@ -73,14 +76,6 @@ body {
   padding-right: 16px;
 }
 
-.navbarPadding {
-  padding: 0px;
-}
-
-.logoContainer {
-  margin-left: 16px;
-}
-
 .logoImage {
   width: 218px;
   height: 40px;
@@ -93,34 +88,30 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  .logoContainer {
-    margin-left: 64px;
+@media (min-width: 1572px) {
+  .navbar {
+    padding: 0px 13vw 0px 13vw;
   }
 }
 
 .picContainer {
-  background-image: url(../img/potato_transfer.png);
+  background-image: url(../img/YaraFarmforwardCoverMobile.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.detailsContainer {
+  background-blend-mode: multiply;
   background-color: rgba(15, 15, 15, 0.4);
-}
-
-.picContainer .detailsContainer .details {
-  margin: 0px 16px 0px 20px;
+  padding: 0px 3vw 0px 3vw;
 }
 
 .title {
-  font-family: "MaxLF-Regular";
+  font-family: "Max-Regular";
   font-size: 2.5em;
   color: white;
   line-height: 1.2;
   letter-spacing: 0.0018px;
-  margin-top: 48px;
+  margin-top: 10vw;
+  font-weight: normal;
 }
 
 .downloadButton {
@@ -134,13 +125,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 32px 0px 32px 0px;
+  margin: 8vw 0px 8vw 0px;
   text-align: center;
-  max-width: 320px;
+  /* margin-bottom: 16px; */
 }
 
 .picContainer .phoneImageContainer {
-  background-color: rgba(15, 15, 15, 0.4);
   display: none;
 }
 
@@ -149,35 +139,46 @@ body {
   bottom: 0px;
 }
 
-@media (max-width: 414px) {
+@media (min-width: 414px) {
   .downloadButton {
-    max-width: 100%;
+    max-width: 320px;
   }
 }
 
 @media (min-width: 768px) {
   .picContainer {
     min-height: 565px;
+    background-image: url(../img/YaraFarmforwardCover.jpg);
+    padding: 0px 6vw 0px 6vw;
   }
   .picContainer .phoneImageContainer {
-    background-color: rgba(15, 15, 15, 0.4);
     display: flex;
-  }
-  .picContainer .detailsContainer .details {
-    margin: 0px 16px 0px 64px;
   }
   .title {
     font-size: 3.25em;
-    margin-top: 142px;
+    margin-top: 102px;
     line-height: 1.2;
   }
   .downloadButton {
     margin-top: 56px;
+    margin-bottom: 75px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .picContainer {
+    background-image: url(../img/YaraFarmforwardCover.jpg);
+    padding: 0px 18vw 0px 18vw;
+  }
+  .title {
+    font-size: 3.25em;
+    margin-top: 102px;
+    line-height: 1.2;
   }
 }
 
 .tailsContainer {
-  padding: 0px 16px 40px 16px;
+  padding: 0px 3vw 10vw 3vw;
 }
 
 .tail {
@@ -195,7 +196,7 @@ body {
 }
 
 .tailTitle {
-  font-family: "MaxLF-Regular";
+  font-family: "Max-Regular";
   font-size: 1.75em;
   text-align: center;
   line-height: 1.28;
@@ -212,11 +213,26 @@ body {
   line-height: 1.6;
   color: rgba(15, 15, 15, 0.8);
   text-align: center;
+  font-weight: mo;
+  font-weight: normal;
 }
 
 @media (min-width: 768px) {
   .tailsContainer {
-    padding: 60px 58px 100px 58px;
+    padding: 6vw 6vw 7vw 6vw;
+  }
+  .tail {
+    margin-top: 0px;
+  }
+  .tailTitle {
+    margin-top: 40px;
+    min-height: 72px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .tailsContainer {
+    padding: 5vw 17vw 7vw 17vw;
   }
   .tail {
     margin-top: 0px;
@@ -231,12 +247,12 @@ body {
   background-color: #7a563d;
   display: flex;
   flex-direction: column;
-  padding: 48px 0px 48px 0px;
+  padding: 10vw 3vw 10vw 3vw;
 }
 
 .informationTitle {
   color: white;
-  font-family: "MaxLF-Regular";
+  font-family: "Max-Regular";
   font-size: 2.5em;
   line-height: 1;
   letter-spacing: 0.0018px;
@@ -248,7 +264,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 48px 16px 0px 16px;
+  margin: 48px 0px 0px 0px;
 }
 
 .informationImage {
@@ -262,7 +278,7 @@ body {
 }
 
 .informationTileTitle {
-  font-family: "MaxLF-Regular";
+  font-family: "Max-Regular";
   font-size: 1.75em;
   line-height: 1.28;
   letter-spacing: 0.0018px;
@@ -283,11 +299,10 @@ body {
 
 @media (min-width: 768px) {
   .informationContainer {
-    padding: 48px 0px 100px 0px;
+    padding: 3vw 20vw 6vw 20vw;
   }
   .informationTile {
     flex-direction: row;
-    margin: 30px 100px 0px 100px;
     align-items: center;
   }
   .informationTileTitle {
@@ -305,14 +320,8 @@ body {
   }
 }
 
-@media (min-width: 1000px) {
-  .informationTile {
-    margin: 30px 230px 0px 230px;
-  }
-}
-
 .agronomistContainer {
-  padding: 48px 16px 48px 16px;
+  padding: 10vw 3vw 10vw 3vw;
 }
 
 .agronomistTile {
@@ -322,7 +331,7 @@ body {
 }
 
 .agronoimistDetailsTitle {
-  font-family: "MaxLF-Regular";
+  font-family: "Max-Regular";
   font-size: 2em;
   line-height: 2em;
   letter-spacing: 0.0018px;
@@ -357,7 +366,7 @@ body {
 }
 
 .agronomistTileName {
-  font-family: "MaxLF-Regular";
+  font-family: "Max-Regular";
   font-size: 1.5em;
   line-height: 2.313em;
   color: black;
@@ -365,7 +374,7 @@ body {
 }
 
 .agronomistTileDesignation {
-  font-family: "MaxLF-Regular";
+  font-family: "Max-Regular";
   font-size: 1.25em;
   line-height: 1.6;
   color: rgba(15, 15, 15, 0.8);
@@ -389,7 +398,7 @@ body {
 
 @media (min-width: 768px) {
   .agronomistContainer {
-    padding: 56px 230px 100px 230px;
+    padding: 5vw 17vw 6vw 17vw;
   }
   .agronoimistDetailsTitle {
     font-size: 2.5em;
@@ -451,5 +460,11 @@ body {
   }
   .primaryAndTermsButton {
     margin: 32px 12px 0px 0px;
+  }
+}
+
+@media (min-width: 1572px) {
+  .termsAndConditionsContainer {
+    padding: 0px 13vw 0px 13vw;
   }
 }
