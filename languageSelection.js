@@ -139,3 +139,5 @@ function languageSelection(language) {
   enButton.style.color = isEnglishSelected ? "#7a563d" : "#0f0f0f";
   hiButton.style.color = isEnglishSelected ? "#0f0f0f" : "#7a563d";
 }
+
+languageSelection("Hi");
