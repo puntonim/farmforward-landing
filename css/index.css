@@ -1,174 +1,455 @@
 @font-face {
-    font-family: "MaxLF-Bold";
-    src: url("../fonts/MaxLF-Bold.woff") format("woff"),
-        url("../fonts/MaxLF-Bold.otf") format("otf");
+  font-family: "MaxLF-Bold";
+  src: url("../fonts/MaxLF-Bold.woff") format("woff"),
+    url("../fonts/MaxLF-Bold.otf") format("otf");
 }
 
 @font-face {
-    font-family: "MaxLF-Book";
-    src: url("../fonts/MaxLF-Book.woff") format("woff"),
-        url("../fonts/MaxLF-Book.otf") format("otf");
+  font-family: "MaxLF-Book";
+  src: url("../fonts/MaxLF-Book.woff") format("woff"),
+    url("../fonts/MaxLF-Book.otf") format("otf");
 }
 
 @font-face {
-    font-family: "MaxLF-Regular";
-    src: url("../fonts/MaxLF-Regular.woff") format("woff"),
-        url("../fonts/MaxLF-Regular.otf") format("otf");
+  font-family: "MaxLF-Regular";
+  src: url("../fonts/MaxLF-Regular.woff") format("woff"),
+    url("../fonts/MaxLF-Regular.otf") format("otf");
 }
 
 @font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans-Regular.woff") format("woff"),
-        url("../fonts/NotoSans-Regular.ttf") format("ttf");
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Regular.woff") format("woff"),
+    url("../fonts/NotoSans-Regular.ttf") format("ttf");
 }
 
 @font-face {
-    font-family: "Noto Sans Devanagari UI";
-    src: url("../fonts/NotoSansDevanagariUI-Medium.woff") format("woff"),
-        url("../fonts/NotoSansDevanagariUI-Medium.ttf") format("ttf");
+  font-family: "Noto Sans Devanagari UI";
+  src: url("../fonts/NotoSansDevanagariUI-Medium.woff") format("woff"),
+    url("../fonts/NotoSansDevanagariUI-Medium.ttf") format("ttf");
 }
 
-html {
-    min-height: 100vh;
+html,
+body {
+  overflow-x: hidden;
 }
 
-.navbar {
-    background-color: #ffffff;
+body {
+  position: relative;
 }
 
-.languages {
-    padding-right: 2em;
-}
 .navbar .eng {
-    font-family: "Noto Sans";
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    align-items: center;
-    text-align: center;
-    font-feature-settings: "zero" on;
-    color: #7a563d;
-    margin-right: 2em;
-    display: inline-block;
+  font-family: "Noto Sans";
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.5em;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "zero" on;
+  color: #7a563d;
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .navbar .hin {
-    font-family: "Noto Sans Devanagari UI";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-feature-settings: "zero" on;
-    color: rgba(15, 15, 15, 0.4);
-    display: inline-block;
+  font-family: "Noto Sans Devanagari UI";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "zero" on;
+  color: rgba(15, 15, 15, 0.4);
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.root-container {
-    background-image: url("../img/rebeca-g-sendroiu-1920-50.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 100vh;
-    text-align: center;
+.navbarPadding {
+  padding: 0px;
 }
 
-.navbar-brand {
-    margin-left: 2em;
-    font-family: "MaxLF-Book";
-    font-size: 28px;
-    line-height: 24px;
-    color: #00205b;
+.logoContainer {
+  margin-left: 16px;
 }
 
-.navbar-brand .forward {
-    color: rgb(140, 130, 120);
-    font-weight: 600;
+.logoImage {
+  width: 218px;
+  height: 40px;
 }
 
 @media (max-width: 414px) {
-    .navbar-brand {
-        margin-left: 0.5em;
-    }
-    .languages {
-        padding-right: 0.5em;
-    }
-}
-
-.main-text {
-    margin: auto;
-    width: 70vw;
-    max-width: 50em;
-    border: none;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    font-family: "MaxLF-Regular";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 130%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.0018px;
-    color: #ffffff;
-}
-
-@media (min-width: 576px) {
-    .main-text {
-        font-size: 36px;
-    }
+  .logoImage {
+    width: 150px;
+    height: 27px;
+  }
 }
 
 @media (min-width: 768px) {
-    .main-text {
-        font-size: 42px;
-    }
+  .logoContainer {
+    margin-left: 64px;
+  }
 }
 
-@media (min-width: 992px) {
-    .main-text {
-        font-size: 48px;
-    }
+.picContainer {
+  background-image: url(../img/potato_transfer.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.vertically-centered {
-    position: relative;
-    top: 45%;
-    transform: translateY(-50%);
+.detailsContainer {
+  background-color: rgba(15, 15, 15, 0.4);
 }
 
-.download-container {
-    position: absolute;
-    bottom: 8em;
-    width: 100vw;
-    text-align: center;
+.picContainer .detailsContainer .details {
+  margin: 0px 16px 0px 20px;
 }
-.download {
-    background-color: #0058b7;
-    border-color: #0058b7;
-    box-shadow: 0px 2px 2px rgba(15, 15, 15, 0.12),
-        0px 0px 2px rgba(15, 15, 15, 0.12), 0px 1px 0px rgba(15, 15, 15, 0.04);
-    border-radius: 6px;
+
+.title {
+  font-family: "MaxLF-Regular";
+  font-size: 2.5em;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: 0.0018px;
+  margin-top: 48px;
 }
-.download .button-text {
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    padding-left: 4em;
-    padding-right: 4em;
-    font-family: "MaxLF-Bold";
-    font-style: normal;
-    /* font-weight: bold; */
-    font-size: 15px;
-    line-height: 24px;
+
+.downloadButton {
+  background-color: #0058b7;
+  border-radius: 6px;
+  font-family: "Noto Sans";
+  font-weight: bold;
+  color: white;
+  font-size: 1.125em;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0px 32px 0px;
+  text-align: center;
+  max-width: 320px;
+}
+
+.picContainer .phoneImageContainer {
+  background-color: rgba(15, 15, 15, 0.4);
+  display: none;
+}
+
+.phoneImage {
+  position: absolute;
+  bottom: 0px;
+}
+
+@media (max-width: 414px) {
+  .downloadButton {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .picContainer {
+    min-height: 565px;
+  }
+  .picContainer .phoneImageContainer {
+    background-color: rgba(15, 15, 15, 0.4);
     display: flex;
+  }
+  .picContainer .detailsContainer .details {
+    margin: 0px 16px 0px 64px;
+  }
+  .title {
+    font-size: 3.25em;
+    margin-top: 142px;
+    line-height: 1.2;
+  }
+  .downloadButton {
+    margin-top: 56px;
+  }
+}
+
+.tailsContainer {
+  padding: 0px 16px 40px 16px;
+}
+
+.tail {
+  margin-top: 48px;
+}
+
+.tailImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.tailImage {
+  width: 80px;
+  height: 80px;
+}
+
+.tailTitle {
+  font-family: "MaxLF-Regular";
+  font-size: 1.75em;
+  text-align: center;
+  line-height: 1.28;
+  letter-spacing: 0.0018px;
+  margin-top: 24px;
+  width: 100%;
+  min-height: 0px;
+}
+
+.tileDescription {
+  font-family: "Noto Sans";
+  margin-top: 16px;
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: rgba(15, 15, 15, 0.8);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .tailsContainer {
+    padding: 60px 58px 100px 58px;
+  }
+  .tail {
+    margin-top: 0px;
+  }
+  .tailTitle {
+    margin-top: 40px;
+    min-height: 72px;
+  }
+}
+
+.informationContainer {
+  background-color: #7a563d;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 0px 48px 0px;
+}
+
+.informationTitle {
+  color: white;
+  font-family: "MaxLF-Regular";
+  font-size: 2.5em;
+  line-height: 1;
+  letter-spacing: 0.0018px;
+  align-self: center;
+  text-align: center;
+}
+
+.informationTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px 16px 0px 16px;
+}
+
+.informationImage {
+  width: 146px;
+  height: 146px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.informationTileTitle {
+  font-family: "MaxLF-Regular";
+  font-size: 1.75em;
+  line-height: 1.28;
+  letter-spacing: 0.0018px;
+  color: #ebd8ce;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.informationTileDescription {
+  font-family: "Noto Sans";
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: #ffffff;
+  letter-spacing: 0.0018px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .informationContainer {
+    padding: 48px 0px 100px 0px;
+  }
+  .informationTile {
+    flex-direction: row;
+    margin: 30px 100px 0px 100px;
     align-items: center;
-    text-align: center;
-    font-feature-settings: "zero" on;
-    color: #ffffff;
+  }
+  .informationTileTitle {
+    font-size: 2em;
+    line-height: 1.28;
+    letter-spacing: 0.0018px;
+    text-align: left;
+  }
+  .informationTileDescription {
+    text-align: left;
+    margin-top: 12px;
+  }
+  .information {
+    margin-left: 32px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .informationTile {
+    margin: 30px 230px 0px 230px;
+  }
+}
+
+.agronomistContainer {
+  padding: 48px 16px 48px 16px;
+}
+
+.agronomistTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agronoimistDetailsTitle {
+  font-family: "MaxLF-Regular";
+  font-size: 2em;
+  line-height: 2em;
+  letter-spacing: 0.0018px;
+  color: #381f0b;
+  text-align: center;
+}
+
+.agronomistDetailsDescription {
+  font-family: "Noto Sans";
+  font-size: 1.125em;
+  line-height: 1.5;
+  color: rgba(15, 15, 15, 0.8);
+  text-align: center;
+  margin-top: 24px;
+}
+
+.agronomistTile {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agronomistTileImage {
+  width: 132px;
+  height: 132px;
+}
+
+.agronomistTileNameAndDesignation {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.agronomistTileName {
+  font-family: "MaxLF-Regular";
+  font-size: 1.5em;
+  line-height: 2.313em;
+  color: black;
+  letter-spacing: 0.0018px;
+}
+
+.agronomistTileDesignation {
+  font-family: "MaxLF-Regular";
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: rgba(15, 15, 15, 0.8);
+  letter-spacing: 0.0018px;
+}
+
+.agronomistTileDescrpition {
+  font-family: "Noto Sans";
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: rgba(15, 15, 15, 0.97);
+  text-align: center;
+  margin-top: 24px;
+}
+
+.agronomistTileSeperator {
+  margin: 32px 16px 0px 16px;
+  height: 1px;
+  background-color: rgba(15, 15, 15, 0.1);
+}
+
+@media (min-width: 768px) {
+  .agronomistContainer {
+    padding: 56px 230px 100px 230px;
+  }
+  .agronoimistDetailsTitle {
+    font-size: 2.5em;
+    line-height: 1;
+    letter-spacing: 0.0018px;
+  }
+  .agronomistTileSeperator {
+    margin: 32px 100px 0px 100px;
+  }
+}
+
+.downloadDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 16px 40px 16px;
+  background-color: #e6f2fa;
+}
+
+.downloadDescription {
+  font-family: "Noto Sans";
+  font-size: 1.25em;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(15, 15, 15, 0.97);
+}
+
+@media (min-width: 768px) {
+  .downloadDescriptionContainer {
+    padding: 40px 200px 40px 200px;
+  }
+}
+
+.termsAndConditionsContainer {
+  background-color: #00205b;
+}
+
+.termsAndConditionsText {
+  margin: 32px 16px 32px 16px;
+  font-family: "Noto Sans";
+  font-size: 0.875em;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.primaryAndTermsButton {
+  margin: 32px 12px 0px 0px;
+  color: white;
+  font-family: "Noto Sans";
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .termsAndConditionsText {
+    margin: 32px 16px 64px 64px;
+  }
+  .primaryAndTermsButton {
+    margin: 32px 12px 0px 0px;
+  }
 }
