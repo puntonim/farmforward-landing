@@ -442,9 +442,9 @@ body {
   line-height: 1.5;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .termsAndConditionsText {
-    margin: 32px 16px 32px 64px;
+    margin: 32px 16px 64px 64px;
   }
   .primaryAndTermsButton {
     margin: 32px 12px 0px 0px;
