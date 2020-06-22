@@ -78,7 +78,7 @@ body {
 }
 
 .logoContainer {
-  margin-left: 64px;
+  margin-left: 16px;
 }
 
 .logoImage {
@@ -87,38 +87,15 @@ body {
 }
 
 @media (max-width: 414px) {
+  .logoImage {
+    width: 150px;
+    height: 27px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .logoContainer {
-    margin-left: 16px;
-  }
-}
-
-@media (max-width: 360px) {
-  .logoImage {
-    width: 196px;
-    height: 36px;
-  }
-}
-
-@media (max-width: 320px) {
-  .logoImage {
-    width: 120px;
-    height: 22px;
-  }
-}
-
-.languages {
-  margin-right: 64px;
-}
-
-@media (max-width: 414px) {
-  .languages {
-    margin-right: 8px;
-  }
-}
-
-@media (max-width: 414px) {
-  .languages {
-    margin-right: 0px;
+    margin-left: 64px;
   }
 }
 
@@ -154,14 +131,12 @@ body {
   color: white;
   font-size: 1.125em;
   line-height: 1.3;
-  margin-bottom: 102px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 320px;
   margin: 32px 0px 32px 0px;
-  max-width: 100%;
   text-align: center;
+  max-width: 320px;
 }
 
 .picContainer .phoneImageContainer {
@@ -174,7 +149,13 @@ body {
   bottom: 0px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (max-width: 414px) {
+  .downloadButton {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .picContainer {
     min-height: 565px;
   }
@@ -192,12 +173,15 @@ body {
   }
   .downloadButton {
     margin-top: 56px;
-    max-width: 320px;
   }
 }
 
 .tailsContainer {
-  padding: 60px 58px 100px 58px;
+  padding: 0px 16px 40px 16px;
+}
+
+.tail {
+  margin-top: 48px;
 }
 
 .tailImageContainer {
@@ -216,9 +200,9 @@ body {
   text-align: center;
   line-height: 1.28;
   letter-spacing: 0.0018px;
-  margin-top: 40px;
+  margin-top: 24px;
   width: 100%;
-  min-height: 72px;
+  min-height: 0px;
 }
 
 .tileDescription {
@@ -230,16 +214,16 @@ body {
   text-align: center;
 }
 
-@media (max-width: 414px) {
+@media only screen and (min-width: 768px) {
   .tailsContainer {
-    padding: 0px 16px 40px 16px;
+    padding: 60px 58px 100px 58px;
   }
   .tail {
-    margin-top: 48px;
+    margin-top: 0px;
   }
   .tailTitle {
-    margin-top: 24px;
-    min-height: 0px;
+    margin-top: 40px;
+    min-height: 72px;
   }
 }
 
@@ -300,7 +284,7 @@ body {
 @media (min-width: 768px) {
   .informationTile {
     flex-direction: row;
-    margin: 30px 230px 0px 230px;
+    margin: 30px 100px 0px 100px;
     align-items: center;
   }
   .informationTileTitle {
@@ -318,8 +302,14 @@ body {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .informationTile {
+    margin: 30px 230px 0px 230px;
+  }
+}
+
 .agronomistContainer {
-  padding: 56px 230px 56px 230px;
+  padding: 48px 16px 48px 16px;
 }
 
 .agronomistTile {
@@ -330,8 +320,8 @@ body {
 
 .agronoimistDetailsTitle {
   font-family: "MaxLF-Regular";
-  font-size: 2.5em;
-  line-height: 1;
+  font-size: 2em;
+  line-height: 2em;
   letter-spacing: 0.0018px;
   color: #381f0b;
   text-align: center;
@@ -389,22 +379,22 @@ body {
 }
 
 .agronomistTileSeperator {
-  margin: 32px 100px 0px 100px;
+  margin: 32px 16px 0px 16px;
   height: 1px;
   background-color: rgba(15, 15, 15, 0.1);
 }
 
-@media (max-width: 414px) {
+@media only screen and (min-width: 768px) {
   .agronomistContainer {
-    padding: 48px 16px 48px 16px;
+    padding: 56px 230px 56px 230px;
   }
   .agronoimistDetailsTitle {
-    font-size: 2em;
-    line-height: 2em;
+    font-size: 2.5em;
+    line-height: 1;
     letter-spacing: 0.0018px;
   }
   .agronomistTileSeperator {
-    margin: 32px 16px 0px 16px;
+    margin: 32px 100px 0px 100px;
   }
 }
 
@@ -437,7 +427,7 @@ body {
 }
 
 .termsAndConditionsText {
-  margin: 32px 0px 72px 64px;
+  margin: 32px 16px 32px 16px;
   font-family: "Noto Sans";
   font-size: 0.875em;
   line-height: 1.6;
@@ -452,18 +442,11 @@ body {
   line-height: 1.5;
 }
 
-@media (max-width: 414px) {
+@media only screen and (min-width: 768px) {
   .termsAndConditionsText {
     margin: 32px 16px 32px 16px;
   }
   .primaryAndTermsButton {
     margin: 32px 12px 0px 0px;
   }
-}
-
-.col-xs-0 {
-  flex: 0 0 0;
-  max-width: 0;
-  padding-right: 0;
-  padding-left: 0;
 }
