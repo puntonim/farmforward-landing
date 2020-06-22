@@ -93,7 +93,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .logoContainer {
     margin-left: 64px;
   }
@@ -149,13 +149,13 @@ body {
   bottom: 0px;
 }
 
-@media only screen and (max-width: 414px) {
+@media (max-width: 414px) {
   .downloadButton {
     max-width: 100%;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .picContainer {
     min-height: 565px;
   }
@@ -214,7 +214,7 @@ body {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .tailsContainer {
     padding: 60px 58px 100px 58px;
   }
@@ -282,6 +282,9 @@ body {
 }
 
 @media (min-width: 768px) {
+  .informationContainer {
+    padding: 48px 0px 100px 0px;
+  }
   .informationTile {
     flex-direction: row;
     margin: 30px 100px 0px 100px;
@@ -302,7 +305,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .informationTile {
     margin: 30px 230px 0px 230px;
   }
@@ -384,7 +387,7 @@ body {
   background-color: rgba(15, 15, 15, 0.1);
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .agronomistContainer {
     padding: 56px 230px 56px 230px;
   }
@@ -416,7 +419,7 @@ body {
   color: rgba(15, 15, 15, 0.97);
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .downloadDescriptionContainer {
     padding: 40px 200px 40px 200px;
   }
