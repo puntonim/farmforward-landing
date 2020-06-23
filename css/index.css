@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: "Nato Sans Bold";
+  font-family: "Noto Sans Bold";
   src: url("../fonts/NotoSans-Bold.woff") format("woff"),
     url("../fonts/NotoSans-Bold.ttf") format("ttf");
 }
@@ -55,8 +55,7 @@ body {
 }
 
 .navbar .eng {
-  font-family: "Nato Sans Bold";
-  /* font-family: Noto Sans; */
+  font-family: "Noto Sans Bold";
   font-style: normal;
   font-size: 1em;
   line-height: 1.5em;
