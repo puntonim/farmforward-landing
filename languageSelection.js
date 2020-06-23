@@ -3,9 +3,9 @@ const data = {
     "Grow better and more profitable potatoes with the farmforward app",
   mainTitleHi: "फार्मफॉरवर्ड ऐप के साथ बेहतर और अधिक लाभदायक आलू उगाएं",
   downloadButtonEn: "Free download for Android",
-  downloadButtonHi: "एंड्रॉयड के लिए मुफ्त डाउनलोड",
+  downloadButtonHi: "Android के लिए मुफ्त डाउनलोड",
   turnYourPhoneEn: "Turn your phone into an agronomist",
-  turnYourPhoneHi: "अपने फोन को एग्रोनोमिस्ट में बदल दें",
+  turnYourPhoneHi: "अपना फोन चालू करें एक कृषिविज्ञानी में",
   turnYourPhoneDescEn:
     "Receive weekly farm activities from Yara agronomists based on your planting date, from pre-planting to harvest.",
   turnYourPhoneDescHi:
@@ -15,13 +15,13 @@ const data = {
   makeYourFieldsProfitableDescEn:
     "Play fun quizzes and read articles that help you improve your potato quality, reap higher yields, and learn new farm practises.",
   makeYourFieldsProfitableDescHi:
-    "मज़ेदार क्विज़ खेलें और उन लेखों को पढ़ें जो आपको अपने आलू की गुणवत्ता में सुधार करने, उच्च पैदावार लेने और नए खेत प्रथाओं को सीखने में मदद करते हैं।",
+    "मज़ेदार क्विज़ खेलें और उन लेखों को पढ़ें जो आपके आलू को बेहतर बनाने में मदद करते हैं, उच्च पैदावार लेते हैं, और नए खेत अभ्यास सीखते हैं।",
   becomeStarEn: "Become a Yara star farmer",
   becomeStarHi: "यारा स्टार किसान बनें",
   becomeStarDescEn:
     "Complete activities to gain points and get to the top of the leaderboard. Be recognised as a star farmer in your community.",
   becomeStarDescHi:
-    "अंक हासिल करने और लीडरबोर्ड के शीर्ष पर पहुंचने के लिए पूरी गतिविधियाँ। अपने समुदाय में एक स्टार किसान के रूप में पहचाना जाना चाहिए।",
+    "अंक हासिल करने और लीडरबोर्ड के शीर्ष पर पहुंचने के लिए पूरी गतिविधियाँ। अपने समुदाय में एक स्टार किसान के रूप में पहचाने जाते हैं।",
   howItWorksEn: "How it works",
   howItWorksHi: "यह काम किस प्रकार करता है",
   onYourFarmEn: "On your farm",
@@ -78,61 +78,184 @@ const data = {
   termsOfUseHi: "उपयोग की शर्तें",
 };
 
-function languageSelection(language) {
-  document.getElementById("mainTitle").innerHTML = data[`mainTitle${language}`];
-  document.getElementById("downloadButtonTop").innerHTML =
-    data[`downloadButton${language}`];
-  document.getElementById("turnYourPhoneTitle").innerHTML =
-    data[`turnYourPhone${language}`];
-  document.getElementById("turnYourPhoneDesc").innerHTML =
-    data[`turnYourPhoneDesc${language}`];
-  document.getElementById("makeYieldTitle").innerHTML =
-    data[`makeYourFieldsProfitable${language}`];
-  document.getElementById("makeYieldDesc").innerHTML =
-    data[`makeYourFieldsProfitableDesc${language}`];
-  document.getElementById("becomeStarTitle").innerHTML =
-    data[`becomeStar${language}`];
-  document.getElementById("becomeStarDesc").innerHTML =
-    data[`becomeStarDesc${language}`];
-  document.getElementById("howItWorks").innerHTML =
-    data[`howItWorks${language}`];
-  document.getElementById("onYourFarmTitle").innerHTML =
-    data[`onYourFarm${language}`];
-  document.getElementById("onYourFarmDesc").innerHTML =
-    data[`onYourFarmDesc${language}`];
-  document.getElementById("everyWeekTitle").innerHTML =
-    data[`everyWeek${language}`];
-  document.getElementById("everyWeekDesc").innerHTML =
-    data[`everyWeekDesc${language}`];
-  document.getElementById("throughoutSeasonTitle").innerHTML =
-    data[`throughOutYourSeason${language}`];
-  document.getElementById("throughoutSeasonDesc").innerHTML =
-    data[`throughOutYourSeasonDesc${language}`];
-  document.getElementById("whatAgronomistSayTitle").innerHTML =
-    data[`whatAgronomistSay${language}`];
-  document.getElementById("whatAgronomistSayDesc").innerHTML =
-    data[`whatAgronomistSayDesc${language}`];
-  document.getElementById("neerajTitle").innerHTML =
-    data[`neerajKumar${language}`];
-  document.getElementById("neerajDesg").innerHTML =
-    data[`neerajKumarDesg${language}`];
-  document.getElementById("neerajDesc").innerHTML =
-    data[`neerajKumarDesc${language}`];
-  document.getElementById("swathiTitle").innerHTML =
-    data[`swathiNayak${language}`];
-  document.getElementById("swathiDesg").innerHTML =
-    data[`swathiNayakDesg${language}`];
-  document.getElementById("swathiDesc").innerHTML =
-    data[`swathiNayakDesc${language}`];
-  document.getElementById("downloadDesc").innerHTML =
-    data[`downloadToday${language}`];
-  document.getElementById("downloadButtonBottom").innerHTML =
-    data[`downloadButton${language}`];
-  document.getElementById("privacyPolicy").innerHTML =
-    data[`privacyPolicy${language}`];
-  document.getElementById("termsOfUse").innerHTML =
-    data[`termsOfUse${language}`];
-  document.getElementById("copyRight").innerHTML = data[`copyRight${language}`];
+function languageSelection() {
+  const href = window.location.href;
+  const language = href.includes("lang=en") ? "En" : "Hi";
+  const isLanguageEnglish = language === "En";
+  const mainTitle = document.getElementById("mainTitle");
+  mainTitle.innerHTML = data[`mainTitle${language}`];
+  mainTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const downloadButtonTop = document.getElementById("downloadButtonTop");
+  downloadButtonTop.innerHTML = data[`downloadButton${language}`];
+  downloadButtonTop.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const turnYourPhoneTitle = document.getElementById("turnYourPhoneTitle");
+  turnYourPhoneTitle.innerHTML = data[`turnYourPhone${language}`];
+  turnYourPhoneTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const turnYourPhoneDesc = document.getElementById("turnYourPhoneDesc");
+  turnYourPhoneDesc.innerHTML = data[`turnYourPhoneDesc${language}`];
+  turnYourPhoneDesc.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const makeYieldTitle = document.getElementById("makeYieldTitle");
+  makeYieldTitle.innerHTML = data[`makeYourFieldsProfitable${language}`];
+  makeYieldTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const makeYieldDesc = document.getElementById("makeYieldDesc");
+  makeYieldDesc.innerHTML = data[`makeYourFieldsProfitableDesc${language}`];
+  makeYieldDesc.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const becomeStarTitle = document.getElementById("becomeStarTitle");
+  becomeStarTitle.innerHTML = data[`becomeStar${language}`];
+  becomeStarTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const becomeStarDesc = document.getElementById("becomeStarDesc");
+  becomeStarDesc.innerHTML = data[`becomeStarDesc${language}`];
+  becomeStarDesc.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const howItWorks = document.getElementById("howItWorks");
+  howItWorks.innerHTML = data[`howItWorks${language}`];
+  howItWorks.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const onYourFarmTitle = document.getElementById("onYourFarmTitle");
+  onYourFarmTitle.innerHTML = data[`onYourFarm${language}`];
+  onYourFarmTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const onYourFarmDesc = document.getElementById("onYourFarmDesc");
+  onYourFarmDesc.innerHTML = data[`onYourFarmDesc${language}`];
+  onYourFarmDesc.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const everyWeekTitle = document.getElementById("everyWeekTitle");
+  everyWeekTitle.innerHTML = data[`everyWeek${language}`];
+  everyWeekTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const everyWeekDesc = document.getElementById("everyWeekDesc");
+  everyWeekDesc.innerHTML = data[`everyWeekDesc${language}`];
+  everyWeekDesc.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const throughoutSeasonTitle = document.getElementById(
+    "throughoutSeasonTitle"
+  );
+  throughoutSeasonTitle.innerHTML = data[`throughOutYourSeason${language}`];
+  throughoutSeasonTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const throughoutSeasonDesc = document.getElementById("throughoutSeasonDesc");
+  throughoutSeasonDesc.innerHTML = data[`throughOutYourSeasonDesc${language}`];
+  throughoutSeasonDesc.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const whatAgronomistSayTitle = document.getElementById(
+    "whatAgronomistSayTitle"
+  );
+  whatAgronomistSayTitle.innerHTML = data[`whatAgronomistSay${language}`];
+  whatAgronomistSayTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const whatAgronomistSayDesc = document.getElementById(
+    "whatAgronomistSayDesc"
+  );
+  whatAgronomistSayDesc.innerHTML = data[`whatAgronomistSayDesc${language}`];
+  whatAgronomistSayTitle.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const neerajTitle = document.getElementById("neerajTitle");
+  neerajTitle.innerHTML = data[`neerajKumar${language}`];
+  neerajTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const neerajDesg = document.getElementById("neerajDesg");
+  neerajDesg.innerHTML = data[`neerajKumarDesg${language}`];
+  neerajDesg.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const neerajDesc = document.getElementById("neerajDesc");
+  neerajDesc.innerHTML = data[`neerajKumarDesc${language}`];
+  neerajDesc.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const swathiTitle = document.getElementById("swathiTitle");
+  swathiTitle.innerHTML = data[`swathiNayak${language}`];
+  swathiTitle.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const swathiDesg = document.getElementById("swathiDesg");
+  swathiDesg.innerHTML = data[`swathiNayakDesg${language}`];
+  swathiDesg.style.fontFamily = isLanguageEnglish
+    ? "Max-Regular"
+    : "Noto Sans Devanagari UI";
+
+  const swathiDesc = document.getElementById("swathiDesc");
+  swathiDesc.innerHTML = data[`swathiNayakDesc${language}`];
+  swathiDesc.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const downloadDesc = document.getElementById("downloadDesc");
+  downloadDesc.innerHTML = data[`downloadToday${language}`];
+  downloadDesc.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const downloadButtonBottom = document.getElementById("downloadButtonBottom");
+  downloadButtonBottom.innerHTML = data[`downloadButton${language}`];
+  downloadButtonBottom.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const privacyPolicy = document.getElementById("privacyPolicy");
+  privacyPolicy.innerHTML = data[`privacyPolicy${language}`];
+  privacyPolicy.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const termsOfUse = document.getElementById("termsOfUse");
+  termsOfUse.innerHTML = data[`termsOfUse${language}`];
+  termsOfUse.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
+  const copyRight = document.getElementById("copyRight");
+  copyRight.innerHTML = data[`copyRight${language}`];
+  copyRight.style.fontFamily = isLanguageEnglish
+    ? "Noto Sans"
+    : "Noto Sans Devanagari UI";
+
   const enButton = document.getElementById("enButton");
   const hiButton = document.getElementById("hiButton");
   const isEnglishSelected = language == "En";
@@ -140,4 +263,4 @@ function languageSelection(language) {
   hiButton.style.color = isEnglishSelected ? "#0f0f0f" : "#7a563d";
 }
 
-languageSelection("Hi");
+languageSelection();

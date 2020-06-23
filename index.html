@@ -15,41 +15,37 @@
       crossorigin="anonymous"
     />
     <link rel="manifest" href="site.webmanifest" />
-    <link rel="apple-touch-icon" href="icon.png" />
-
+    <link rel="icon" type="image/png" href="./img/favIcon.png" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/index.css" />
 
     <meta name="theme-color" content="#fafafa" />
+    <meta name="google" content="notranslate" />
   </head>
 
   <body>
     <nav class="navbar navbar-light bg-light navbarPadding">
-      <div class="logoContainer">
+      <div>
         <a href="#">
           <img class="logoImage" src="img/yarafarmforward_logo.svg" alt="" />
         </a>
       </div>
       <div class="mr-3">
-        <a class="eng" id="enButton" onclick="languageSelection('En')">Eng</a>
-        <a class="hin" id="hiButton" onclick="languageSelection('Hi')">हिंदी</a>
+        <a href="?lang=en" class="eng" id="enButton">Eng</a>
+        <a href="?lang=hi" class="hin" id="hiButton">हिंदी</a>
       </div>
     </nav>
     <div class="picContainer row">
       <div class="col-xs-12 col-md-6 col-lg-7 detailsContainer">
         <div class="details">
-          <p class="title" id="mainTitle">
-            Grow better and more profitable potatoes with the farmforward app
-          </p>
+          <p class="title" id="mainTitle"></p>
           <a
             href="https://appdistribution.firebase.dev/i/726a079d554a301b"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div class="downloadButton p-3" id="downloadButtonTop">
-              Free download for Android
-            </div>
+            <div class="downloadButton p-3" id="downloadButtonTop"></div>
           </a>
         </div>
       </div>
@@ -62,37 +58,22 @@
         <div class="tailImageContainer">
           <img src="img/Crop.svg" class="tailImage" />
         </div>
-        <div class="tailTitle" id="turnYourPhoneTitle">
-          Turn your phone into an agronomist
-        </div>
-        <div class="tileDescription" id="turnYourPhoneDesc">
-          Receive weekly farm activities from Yara agronomists based on your
-          planting date, from pre-planting to harvest.
-        </div>
+        <div class="tailTitle" id="turnYourPhoneTitle"></div>
+        <div class="tileDescription" id="turnYourPhoneDesc"></div>
       </div>
       <div class="col-xs-12 col-md-4 tail">
         <div class="tailImageContainer">
           <img src="img/profit.svg" class="tailImage" />
         </div>
-        <div class="tailTitle" id="makeYieldTitle">
-          Make yields more profitable
-        </div>
-        <div class="tileDescription" id="makeYieldDesc">
-          Play fun quizzes and read articles that help you improve your potato
-          quality, reap higher yields, and learn new farm practises.
-        </div>
+        <div class="tailTitle" id="makeYieldTitle"></div>
+        <div class="tileDescription" id="makeYieldDesc"></div>
       </div>
       <div class="col-xs-12 col-md-4 tail">
         <div class="tailImageContainer">
           <img src="img/Reward.svg" class="tailImage" />
         </div>
-        <div class="tailTitle" id="becomeStarTitle">
-          Become a Yara star farmer
-        </div>
-        <div class="tileDescription" id="becomeStarDesc">
-          Complete activities to gain points and get to the top of the
-          leaderboard. Be recognised as a star farmer in your community.
-        </div>
+        <div class="tailTitle" id="becomeStarTitle"></div>
+        <div class="tileDescription" id="becomeStarDesc"></div>
       </div>
     </div>
     <div class="informationContainer">
@@ -100,94 +81,65 @@
       <div class="informationTile">
         <img class="informationImage" src="./img/Location.svg" />
         <div class="information">
-          <div class="informationTileTitle" id="onYourFarmTitle">
-            On your farm
-          </div>
-          <div class="informationTileDescription" id="onYourFarmDesc">
-            Add your location, farm details, crop details, and planting date to
-            set up your profile.
-          </div>
+          <div class="informationTileTitle" id="onYourFarmTitle"></div>
+          <div class="informationTileDescription" id="onYourFarmDesc"></div>
         </div>
       </div>
       <div class="informationTile">
         <img class="informationImage" src="./img/Weekly.svg" />
         <div class="information">
-          <div class="informationTileTitle" id="everyWeekTitle">
-            Every week
-          </div>
-          <div class="informationTileDescription" id="everyWeekDesc">
-            Complete activities to gain points and get to the top of the
-            leaderboard. Be recognised as a star farmer in your community.
-          </div>
+          <div class="informationTileTitle" id="everyWeekTitle"></div>
+          <div class="informationTileDescription" id="everyWeekDesc"></div>
         </div>
       </div>
       <div class="informationTile">
         <img class="informationImage" src="./img/Quizzes.svg" />
         <div class="information">
-          <div class="informationTileTitle" id="throughoutSeasonTitle">
-            Throughout your season
-          </div>
-          <div class="informationTileDescription" id="throughoutSeasonDesc">
-            Play fun quizzes and read useful articles that improve your
-            potato-growing knowledge.
-          </div>
+          <div class="informationTileTitle" id="throughoutSeasonTitle"></div>
+          <div
+            class="informationTileDescription"
+            id="throughoutSeasonDesc"
+          ></div>
         </div>
       </div>
     </div>
     <div class="agronomistContainer">
       <div class="agronomistTile mt-0">
-        <div class="agronoimistDetailsTitle" id="whatAgronomistSayTitle">
-          What agronomists say
-        </div>
-        <div class="agronomistDetailsDescription" id="whatAgronomistSayDesc">
-          The farmforward app is specialised for processed potato farmers in
-          India. It is available in Hindi and English, and is supported by
-          Yara's 100+ years of crop knowledge.
-        </div>
+        <div class="agronoimistDetailsTitle" id="whatAgronomistSayTitle"></div>
+        <div
+          class="agronomistDetailsDescription"
+          id="whatAgronomistSayDesc"
+        ></div>
       </div>
       <div class="agronomistTile">
         <img class="agronomistTileImage" src="./img/Neeraj.svg" />
         <div class="agronomistTileNameAndDesignation">
-          <div class="agronomistTileName" id="neerajTitle">Neeraj Kumar</div>
-          <div class="agronomistTileDesignation" id="neerajDesg">
-            Senior Digital Potato Agronomist, India
-          </div>
-          <div class="agronomistTileDescrpition" id="neerajDesc">
-            "Yara farmforward helps potato farmers learn by recommending farm
-            activities throughout the season that improve crop management,
-            production, and value."
-          </div>
+          <div class="agronomistTileName" id="neerajTitle"></div>
+          <div class="agronomistTileDesignation" id="neerajDesg"></div>
+          <div class="agronomistTileDescrpition" id="neerajDesc"></div>
           <div class="agronomistTileSeperator"></div>
         </div>
       </div>
       <div class="agronomistTile">
         <img class="agronomistTileImage" src="./img/Swati.svg" />
         <div class="agronomistTileNameAndDesignation">
-          <div class="agronomistTileName" id="swathiTitle">Swati Nayak</div>
-          <div class="agronomistTileDesignation" id="swathiDesg">
-            Yara Digital Agronomist, India
-          </div>
-          <div class="agronomistTileDescrpition" id="swathiDesc">
-            "The farmforward app is designed specifically for smallholder potato
-            farmers. It provides them with important insights and useful
-            solutions customised to their needs."
-          </div>
+          <div class="agronomistTileName" id="swathiTitle"></div>
+          <div class="agronomistTileDesignation" id="swathiDesg"></div>
+          <div class="agronomistTileDescrpition" id="swathiDesc"></div>
         </div>
       </div>
     </div>
     <div class="downloadDescriptionContainer">
-      <div class="downloadDescription" id="downloadDesc">
-        Download today to start receiving your personalised potato-growing
-        activities.
-      </div>
+      <div class="downloadDescription" id="downloadDesc"></div>
       <a
         href="https://appdistribution.firebase.dev/i/726a079d554a301b"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div class="downloadButton mb-0 mt-4 p-3" id="downloadButtonBottom">
-          Free download for Android
-        </div>
+        <div
+          class="downloadButton mb-0 mt-4 p-3"
+          id="downloadButtonBottom"
+        ></div>
       </a>
     </div>
     <div class="row termsAndConditionsContainer">
@@ -197,25 +149,17 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div class="primaryAndTermsButton ml-3" id="privacyPolicy">
-            Privacy Policy
-          </div></a
-        >
+          <div class="primaryAndTermsButton ml-3" id="privacyPolicy"></div
+        ></a>
         <a
           href="https://www.yara.com/privacy-and-legal/digital-farming-terms/"
           target="_blank"
           rel="noopener noreferrer"
-          ><div class="primaryAndTermsButton ml-4" id="termsOfUse">
-            Terms of use
-          </div></a
-        >
+          ><div class="primaryAndTermsButton ml-4" id="termsOfUse"></div
+        ></a>
       </div>
       <div class="col-xs-12 col-md-7 order-md-first">
-        <div class="termsAndConditionsText" id="copyRight">
-          Copyright © 2020 Yara. All Rights Reserved. This website uses cookies
-          to give you the best, most relevant experience. By using this website
-          you give us consent to store your cookie as per our Privacy Policy.
-        </div>
+        <div class="termsAndConditionsText" id="copyRight"></div>
       </div>
     </div>
   </body>
