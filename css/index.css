@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: "Nato Sans Bold";
+  font-family: "Noto Sans Bold";
   src: url("../fonts/NotoSans-Bold.woff") format("woff"),
     url("../fonts/NotoSans-Bold.ttf") format("ttf");
 }
@@ -38,19 +38,30 @@ body {
 }
 
 .navbar {
-  padding: 0px 3vw 0px 5vw;
+  height: 64px;
+  padding: 0px 4vw 0px 4vw;
 }
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0px 6vw 0px 6vw;
+  }
+}
+
+@media (min-width: 1152px) {
+  .navbar {
+    padding: 0px 18vw 0px 18vw;
+  }
+}
+
 .navbar .eng {
-  font-family: "Noto Sans";
-  font-family: Noto Sans;
+  font-family: "Noto Sans Bold";
   font-style: normal;
-  font-weight: bold;
   font-size: 1em;
   line-height: 1.5em;
   align-items: center;
   text-align: center;
   font-feature-settings: "zero" on;
-  color: #7a563d;
   display: inline-block;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -59,16 +70,14 @@ body {
 }
 
 .navbar .hin {
-  font-family: "Noto Sans Devanagari UI";
+  font-family: "Noto Sans Devanagari UI Bold";
   font-style: normal;
-  font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   display: flex;
   align-items: center;
   text-align: center;
   font-feature-settings: "zero" on;
-  color: rgba(15, 15, 15, 0.4);
   display: inline-block;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -88,10 +97,8 @@ body {
   }
 }
 
-@media (min-width: 1572px) {
-  .navbar {
-    padding: 0px 13vw 0px 13vw;
-  }
+.main {
+  margin-top: 64px;
 }
 
 .picContainer {
@@ -101,7 +108,7 @@ body {
   background-size: cover;
   background-blend-mode: multiply;
   background-color: rgba(15, 15, 15, 0.4);
-  padding: 0px 3vw 0px 3vw;
+  padding: 0px 4vw 0px 4vw;
 }
 
 .title {
@@ -127,7 +134,9 @@ body {
   align-items: center;
   margin: 8vw 0px 8vw 0px;
   text-align: center;
-  /* margin-bottom: 16px; */
+  display: flex;
+  justify-content: center;
+  height: 64px;
 }
 
 .picContainer .phoneImageContainer {
@@ -137,12 +146,6 @@ body {
 .phoneImage {
   position: absolute;
   bottom: 0px;
-}
-
-@media (min-width: 414px) {
-  .downloadButton {
-    max-width: 320px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -162,6 +165,7 @@ body {
   .downloadButton {
     margin-top: 56px;
     margin-bottom: 75px;
+    max-width: 320px;
   }
 }
 
@@ -178,7 +182,7 @@ body {
 }
 
 .tailsContainer {
-  padding: 0px 3vw 10vw 3vw;
+  padding: 0px 4vw 10vw 4vw;
 }
 
 .tail {
@@ -232,7 +236,7 @@ body {
 
 @media (min-width: 1152px) {
   .tailsContainer {
-    padding: 5vw 17vw 7vw 17vw;
+    padding: 5vw 18vw 7vw 18vw;
   }
   .tail {
     margin-top: 0px;
@@ -247,7 +251,7 @@ body {
   background-color: #7a563d;
   display: flex;
   flex-direction: column;
-  padding: 10vw 3vw 10vw 3vw;
+  padding: 10vw 4vw 10vw 4vw;
 }
 
 .informationTitle {
@@ -299,7 +303,7 @@ body {
 
 @media (min-width: 768px) {
   .informationContainer {
-    padding: 3vw 20vw 6vw 20vw;
+    padding: 3vw 17vw 6vw 17vw;
   }
   .informationTile {
     flex-direction: row;
@@ -320,8 +324,20 @@ body {
   }
 }
 
+@media (min-width: 1152px) {
+  .informationContainer {
+    padding: 3vw 20vw 6vw 20vw;
+  }
+}
+
+@media (min-width: 1572px) {
+  .informationContainer {
+    padding: 3vw 22vw 6vw 22vw;
+  }
+}
+
 .agronomistContainer {
-  padding: 10vw 3vw 10vw 3vw;
+  padding: 10vw 4vw 10vw 4vw;
 }
 
 .agronomistTile {
@@ -410,11 +426,17 @@ body {
   }
 }
 
+@media (min-width: 1152px) {
+  .agronomistContainer {
+    padding: 5vw 20vw 6vw 20vw;
+  }
+}
+
 .downloadDescriptionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 16px 40px 16px;
+  padding: 40px 4vw 40px 4vw;
   background-color: #e6f2fa;
 }
 
@@ -428,22 +450,43 @@ body {
   color: rgba(15, 15, 15, 0.97);
 }
 
+.downloadButtonBottom {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .downloadDescriptionContainer {
-    padding: 40px 200px 40px 200px;
+    padding: 40px 17vw 40px 17vw;
+  }
+  .downloadButtonBottom {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .downloadDescriptionContainer {
+    padding: 40px 20vw 40px 20vw;
+  }
+  .downloadButtonBottom {
+    max-width: 320px;
   }
 }
 
 .termsAndConditionsContainer {
   background-color: #00205b;
+  padding: 0px 4vw 0px 4vw;
 }
 
 .termsAndConditionsText {
-  margin: 32px 16px 32px 16px;
+  margin: 32px 16px 32px 0px;
   font-family: "Noto Sans";
   font-size: 0.875em;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.termsButtonsContainer {
+  justify-content: flex-start;
 }
 
 .primaryAndTermsButton {
@@ -455,16 +498,27 @@ body {
 }
 
 @media (min-width: 768px) {
+  .termsAndConditionsContainer {
+    padding: 0px 6vw 0px 6vw;
+  }
   .termsAndConditionsText {
-    margin: 32px 16px 64px 64px;
+    margin: 32px 16px 64px 0px;
   }
   .primaryAndTermsButton {
     margin: 32px 12px 0px 0px;
   }
+  .termsButtonsContainer {
+    justify-content: space-between;
+    padding: 0px 0px 0px 10vw;
+  }
 }
 
-@media (min-width: 1572px) {
+@media (min-width: 1152px) {
   .termsAndConditionsContainer {
-    padding: 0px 13vw 0px 13vw;
+    padding: 0px 18vw 0px 18vw;
+  }
+  .termsButtonsContainer {
+    justify-content: space-between;
+    padding: 0px 0px 0px 8vw;
   }
 }

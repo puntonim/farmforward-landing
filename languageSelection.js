@@ -83,184 +83,185 @@ function languageSelection() {
   const language = href.includes("lang=en") ? "En" : "Hi";
   const isLanguageEnglish = language === "En";
   const mainTitle = document.getElementById("mainTitle");
-  mainTitle.innerHTML = data[`mainTitle${language}`];
   mainTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  mainTitle.innerHTML = data[`mainTitle${language}`];
 
   const downloadButtonTop = document.getElementById("downloadButtonTop");
-  downloadButtonTop.innerHTML = data[`downloadButton${language}`];
   downloadButtonTop.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
-    : "Noto Sans Devanagari UI";
+    : "Noto Sans Devanagari UI Bold";
+  downloadButtonTop.innerHTML = data[`downloadButton${language}`];
 
   const turnYourPhoneTitle = document.getElementById("turnYourPhoneTitle");
-  turnYourPhoneTitle.innerHTML = data[`turnYourPhone${language}`];
   turnYourPhoneTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  turnYourPhoneTitle.innerHTML = data[`turnYourPhone${language}`];
 
   const turnYourPhoneDesc = document.getElementById("turnYourPhoneDesc");
-  turnYourPhoneDesc.innerHTML = data[`turnYourPhoneDesc${language}`];
   turnYourPhoneDesc.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  turnYourPhoneDesc.innerHTML = data[`turnYourPhoneDesc${language}`];
 
   const makeYieldTitle = document.getElementById("makeYieldTitle");
-  makeYieldTitle.innerHTML = data[`makeYourFieldsProfitable${language}`];
   makeYieldTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  makeYieldTitle.innerHTML = data[`makeYourFieldsProfitable${language}`];
 
   const makeYieldDesc = document.getElementById("makeYieldDesc");
-  makeYieldDesc.innerHTML = data[`makeYourFieldsProfitableDesc${language}`];
   makeYieldDesc.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  makeYieldDesc.innerHTML = data[`makeYourFieldsProfitableDesc${language}`];
 
   const becomeStarTitle = document.getElementById("becomeStarTitle");
-  becomeStarTitle.innerHTML = data[`becomeStar${language}`];
   becomeStarTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  becomeStarTitle.innerHTML = data[`becomeStar${language}`];
 
   const becomeStarDesc = document.getElementById("becomeStarDesc");
-  becomeStarDesc.innerHTML = data[`becomeStarDesc${language}`];
   becomeStarDesc.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  becomeStarDesc.innerHTML = data[`becomeStarDesc${language}`];
 
   const howItWorks = document.getElementById("howItWorks");
-  howItWorks.innerHTML = data[`howItWorks${language}`];
   howItWorks.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  howItWorks.innerHTML = data[`howItWorks${language}`];
 
   const onYourFarmTitle = document.getElementById("onYourFarmTitle");
-  onYourFarmTitle.innerHTML = data[`onYourFarm${language}`];
   onYourFarmTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  onYourFarmTitle.innerHTML = data[`onYourFarm${language}`];
 
   const onYourFarmDesc = document.getElementById("onYourFarmDesc");
-  onYourFarmDesc.innerHTML = data[`onYourFarmDesc${language}`];
   onYourFarmDesc.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  onYourFarmDesc.innerHTML = data[`onYourFarmDesc${language}`];
 
   const everyWeekTitle = document.getElementById("everyWeekTitle");
-  everyWeekTitle.innerHTML = data[`everyWeek${language}`];
   everyWeekTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  everyWeekTitle.innerHTML = data[`everyWeek${language}`];
 
   const everyWeekDesc = document.getElementById("everyWeekDesc");
-  everyWeekDesc.innerHTML = data[`everyWeekDesc${language}`];
   everyWeekDesc.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  everyWeekDesc.innerHTML = data[`everyWeekDesc${language}`];
 
   const throughoutSeasonTitle = document.getElementById(
     "throughoutSeasonTitle"
   );
-  throughoutSeasonTitle.innerHTML = data[`throughOutYourSeason${language}`];
   throughoutSeasonTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  throughoutSeasonTitle.innerHTML = data[`throughOutYourSeason${language}`];
 
   const throughoutSeasonDesc = document.getElementById("throughoutSeasonDesc");
-  throughoutSeasonDesc.innerHTML = data[`throughOutYourSeasonDesc${language}`];
   throughoutSeasonDesc.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  throughoutSeasonDesc.innerHTML = data[`throughOutYourSeasonDesc${language}`];
 
   const whatAgronomistSayTitle = document.getElementById(
     "whatAgronomistSayTitle"
   );
-  whatAgronomistSayTitle.innerHTML = data[`whatAgronomistSay${language}`];
   whatAgronomistSayTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  whatAgronomistSayTitle.innerHTML = data[`whatAgronomistSay${language}`];
 
   const whatAgronomistSayDesc = document.getElementById(
     "whatAgronomistSayDesc"
   );
-  whatAgronomistSayDesc.innerHTML = data[`whatAgronomistSayDesc${language}`];
   whatAgronomistSayTitle.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  whatAgronomistSayDesc.innerHTML = data[`whatAgronomistSayDesc${language}`];
 
   const neerajTitle = document.getElementById("neerajTitle");
-  neerajTitle.innerHTML = data[`neerajKumar${language}`];
   neerajTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  neerajTitle.innerHTML = data[`neerajKumar${language}`];
 
   const neerajDesg = document.getElementById("neerajDesg");
-  neerajDesg.innerHTML = data[`neerajKumarDesg${language}`];
   neerajDesg.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  neerajDesg.innerHTML = data[`neerajKumarDesg${language}`];
 
   const neerajDesc = document.getElementById("neerajDesc");
-  neerajDesc.innerHTML = data[`neerajKumarDesc${language}`];
   neerajDesc.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  neerajDesc.innerHTML = data[`neerajKumarDesc${language}`];
 
   const swathiTitle = document.getElementById("swathiTitle");
-  swathiTitle.innerHTML = data[`swathiNayak${language}`];
   swathiTitle.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  swathiTitle.innerHTML = data[`swathiNayak${language}`];
 
   const swathiDesg = document.getElementById("swathiDesg");
-  swathiDesg.innerHTML = data[`swathiNayakDesg${language}`];
   swathiDesg.style.fontFamily = isLanguageEnglish
     ? "Max-Regular"
     : "Noto Sans Devanagari UI";
+  swathiDesg.innerHTML = data[`swathiNayakDesg${language}`];
 
   const swathiDesc = document.getElementById("swathiDesc");
-  swathiDesc.innerHTML = data[`swathiNayakDesc${language}`];
   swathiDesc.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  swathiDesc.innerHTML = data[`swathiNayakDesc${language}`];
 
   const downloadDesc = document.getElementById("downloadDesc");
-  downloadDesc.innerHTML = data[`downloadToday${language}`];
   downloadDesc.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  downloadDesc.innerHTML = data[`downloadToday${language}`];
 
   const downloadButtonBottom = document.getElementById("downloadButtonBottom");
-  downloadButtonBottom.innerHTML = data[`downloadButton${language}`];
   downloadButtonBottom.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
-    : "Noto Sans Devanagari UI";
+    : "Noto Sans Devanagari UI Bold";
+  downloadButtonBottom.innerHTML = data[`downloadButton${language}`];
 
   const privacyPolicy = document.getElementById("privacyPolicy");
-  privacyPolicy.innerHTML = data[`privacyPolicy${language}`];
   privacyPolicy.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  privacyPolicy.innerHTML = data[`privacyPolicy${language}`];
 
   const termsOfUse = document.getElementById("termsOfUse");
-  termsOfUse.innerHTML = data[`termsOfUse${language}`];
   termsOfUse.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  termsOfUse.innerHTML = data[`termsOfUse${language}`];
 
   const copyRight = document.getElementById("copyRight");
-  copyRight.innerHTML = data[`copyRight${language}`];
   copyRight.style.fontFamily = isLanguageEnglish
     ? "Noto Sans"
     : "Noto Sans Devanagari UI";
+  copyRight.innerHTML = data[`copyRight${language}`];
 
   const enButton = document.getElementById("enButton");
   const hiButton = document.getElementById("hiButton");
-  const isEnglishSelected = language == "En";
-  enButton.style.color = isEnglishSelected ? "#7a563d" : "#0f0f0f";
-  hiButton.style.color = isEnglishSelected ? "#0f0f0f" : "#7a563d";
+  const isEnglishSelected = language === "En";
+
+  enButton.style.color = isEnglishSelected ? "#7a563d" : "#0f0f0f66";
+  hiButton.style.color = isEnglishSelected ? "#0f0f0f66" : "#7a563d";
 }
 
 languageSelection();
