@@ -1,174 +1,524 @@
 @font-face {
-    font-family: "MaxLF-Bold";
-    src: url("../fonts/MaxLF-Bold.woff") format("woff"),
-        url("../fonts/MaxLF-Bold.otf") format("otf");
+  font-family: "Max-Regular";
+  src: url("../fonts/Max-Regular.woff") format("woff"),
+    url("../fonts/Max-Regular.ttf") format("ttf");
 }
 
 @font-face {
-    font-family: "MaxLF-Book";
-    src: url("../fonts/MaxLF-Book.woff") format("woff"),
-        url("../fonts/MaxLF-Book.otf") format("otf");
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans.woff") format("woff"),
+    url("../fonts/NotoSans.ttf") format("ttf");
 }
 
 @font-face {
-    font-family: "MaxLF-Regular";
-    src: url("../fonts/MaxLF-Regular.woff") format("woff"),
-        url("../fonts/MaxLF-Regular.otf") format("otf");
+  font-family: "Noto Sans Bold";
+  src: url("../fonts/NotoSans-Bold.woff") format("woff"),
+    url("../fonts/NotoSans-Bold.ttf") format("ttf");
 }
 
 @font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans-Regular.woff") format("woff"),
-        url("../fonts/NotoSans-Regular.ttf") format("ttf");
+  font-family: "Noto Sans Devanagari UI";
+  src: url("../fonts/NotoSansDevanagariUI-Regular.woff") format("woff"),
+    url("../fonts/NotoSansDevanagariUI-Regular.ttf") format("ttf");
 }
 
 @font-face {
-    font-family: "Noto Sans Devanagari UI";
-    src: url("../fonts/NotoSansDevanagariUI-Medium.woff") format("woff"),
-        url("../fonts/NotoSansDevanagariUI-Medium.ttf") format("ttf");
+  font-family: "Noto Sans Devanagari UI Bold";
+  src: url("../fonts/NotoSansDevanagariUI-Bold.woff") format("woff"),
+    url("../fonts/NotoSansDevanagariUI-Bold.ttf") format("ttf");
 }
 
-html {
-    min-height: 100vh;
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
 }
 
 .navbar {
-    background-color: #ffffff;
-}
-
-.languages {
-    padding-right: 2em;
-}
-.navbar .eng {
-    font-family: "Noto Sans";
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    align-items: center;
-    text-align: center;
-    font-feature-settings: "zero" on;
-    color: #7a563d;
-    margin-right: 2em;
-    display: inline-block;
-}
-
-.navbar .hin {
-    font-family: "Noto Sans Devanagari UI";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-feature-settings: "zero" on;
-    color: rgba(15, 15, 15, 0.4);
-    display: inline-block;
-}
-
-.root-container {
-    background-image: url("../img/rebeca-g-sendroiu-1920-50.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 100vh;
-    text-align: center;
-}
-
-.navbar-brand {
-    margin-left: 2em;
-    font-family: "MaxLF-Book";
-    font-size: 28px;
-    line-height: 24px;
-    color: #00205b;
-}
-
-.navbar-brand .forward {
-    color: rgb(140, 130, 120);
-    font-weight: 600;
-}
-
-@media (max-width: 414px) {
-    .navbar-brand {
-        margin-left: 0.5em;
-    }
-    .languages {
-        padding-right: 0.5em;
-    }
-}
-
-.main-text {
-    margin: auto;
-    width: 70vw;
-    max-width: 50em;
-    border: none;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    font-family: "MaxLF-Regular";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 130%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.0018px;
-    color: #ffffff;
-}
-
-@media (min-width: 576px) {
-    .main-text {
-        font-size: 36px;
-    }
+  height: 64px;
+  padding: 0px 4vw 0px 4vw;
 }
 
 @media (min-width: 768px) {
-    .main-text {
-        font-size: 42px;
-    }
+  .navbar {
+    padding: 0px 6vw 0px 6vw;
+  }
 }
 
-@media (min-width: 992px) {
-    .main-text {
-        font-size: 48px;
-    }
+@media (min-width: 1152px) {
+  .navbar {
+    padding: 0px 18vw 0px 18vw;
+  }
 }
 
-.vertically-centered {
-    position: relative;
-    top: 45%;
-    transform: translateY(-50%);
+.navbar .eng {
+  font-family: "Noto Sans Bold";
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1.5em;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "zero" on;
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.download-container {
-    position: absolute;
-    bottom: 8em;
-    width: 100vw;
-    text-align: center;
+.navbar .hin {
+  font-family: "Noto Sans Devanagari UI Bold";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "zero" on;
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-.download {
-    background-color: #0058b7;
-    border-color: #0058b7;
-    box-shadow: 0px 2px 2px rgba(15, 15, 15, 0.12),
-        0px 0px 2px rgba(15, 15, 15, 0.12), 0px 1px 0px rgba(15, 15, 15, 0.04);
-    border-radius: 6px;
+
+.logoImage {
+  width: 218px;
+  height: 40px;
 }
-.download .button-text {
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    padding-left: 4em;
-    padding-right: 4em;
-    font-family: "MaxLF-Bold";
-    font-style: normal;
-    /* font-weight: bold; */
-    font-size: 15px;
-    line-height: 24px;
+
+@media (max-width: 414px) {
+  .logoImage {
+    width: 150px;
+    height: 27px;
+  }
+}
+
+.main {
+  margin-top: 64px;
+}
+
+.picContainer {
+  background-image: url(../img/YaraFarmforwardCoverMobile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(15, 15, 15, 0.4);
+  padding: 0px 4vw 0px 4vw;
+}
+
+.title {
+  font-family: "Max-Regular";
+  font-size: 2.5em;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: 0.0018px;
+  margin-top: 10vw;
+  font-weight: normal;
+}
+
+.downloadButton {
+  background-color: #0058b7;
+  border-radius: 6px;
+  font-family: "Noto Sans";
+  font-weight: bold;
+  color: white;
+  font-size: 1.125em;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8vw 0px 8vw 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 64px;
+}
+
+.picContainer .phoneImageContainer {
+  display: none;
+}
+
+.phoneImage {
+  position: absolute;
+  bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .picContainer {
+    min-height: 565px;
+    background-image: url(../img/YaraFarmforwardCover.jpg);
+    padding: 0px 6vw 0px 6vw;
+  }
+  .picContainer .phoneImageContainer {
     display: flex;
+  }
+  .title {
+    font-size: 3.25em;
+    margin-top: 102px;
+    line-height: 1.2;
+  }
+  .downloadButton {
+    margin-top: 56px;
+    margin-bottom: 75px;
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .picContainer {
+    background-image: url(../img/YaraFarmforwardCover.jpg);
+    padding: 0px 18vw 0px 18vw;
+  }
+  .title {
+    font-size: 3.25em;
+    margin-top: 102px;
+    line-height: 1.2;
+  }
+}
+
+.tailsContainer {
+  padding: 0px 4vw 10vw 4vw;
+}
+
+.tail {
+  margin-top: 48px;
+}
+
+.tailImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.tailImage {
+  width: 80px;
+  height: 80px;
+}
+
+.tailTitle {
+  font-family: "Max-Regular";
+  font-size: 1.75em;
+  text-align: center;
+  line-height: 1.28;
+  letter-spacing: 0.0018px;
+  margin-top: 24px;
+  width: 100%;
+  min-height: 0px;
+}
+
+.tileDescription {
+  font-family: "Noto Sans";
+  margin-top: 16px;
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: rgba(15, 15, 15, 0.8);
+  text-align: center;
+  font-weight: mo;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .tailsContainer {
+    padding: 6vw 6vw 7vw 6vw;
+  }
+  .tail {
+    margin-top: 0px;
+  }
+  .tailTitle {
+    margin-top: 40px;
+    min-height: 72px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .tailsContainer {
+    padding: 5vw 18vw 7vw 18vw;
+  }
+  .tail {
+    margin-top: 0px;
+  }
+  .tailTitle {
+    margin-top: 40px;
+    min-height: 72px;
+  }
+}
+
+.informationContainer {
+  background-color: #7a563d;
+  display: flex;
+  flex-direction: column;
+  padding: 10vw 4vw 10vw 4vw;
+}
+
+.informationTitle {
+  color: white;
+  font-family: "Max-Regular";
+  font-size: 2.5em;
+  line-height: 1;
+  letter-spacing: 0.0018px;
+  align-self: center;
+  text-align: center;
+}
+
+.informationTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px 0px 0px 0px;
+}
+
+.informationImage {
+  width: 146px;
+  height: 146px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.informationTileTitle {
+  font-family: "Max-Regular";
+  font-size: 1.75em;
+  line-height: 1.28;
+  letter-spacing: 0.0018px;
+  color: #ebd8ce;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.informationTileDescription {
+  font-family: "Noto Sans";
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: #ffffff;
+  letter-spacing: 0.0018px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .informationContainer {
+    padding: 3vw 17vw 6vw 17vw;
+  }
+  .informationTile {
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    font-feature-settings: "zero" on;
-    color: #ffffff;
+  }
+  .informationTileTitle {
+    font-size: 2em;
+    line-height: 1.28;
+    letter-spacing: 0.0018px;
+    text-align: left;
+  }
+  .informationTileDescription {
+    text-align: left;
+    margin-top: 12px;
+  }
+  .information {
+    margin-left: 32px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .informationContainer {
+    padding: 3vw 20vw 6vw 20vw;
+  }
+}
+
+@media (min-width: 1572px) {
+  .informationContainer {
+    padding: 3vw 22vw 6vw 22vw;
+  }
+}
+
+.agronomistContainer {
+  padding: 10vw 4vw 10vw 4vw;
+}
+
+.agronomistTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agronoimistDetailsTitle {
+  font-family: "Max-Regular";
+  font-size: 2em;
+  line-height: 2em;
+  letter-spacing: 0.0018px;
+  color: #381f0b;
+  text-align: center;
+}
+
+.agronomistDetailsDescription {
+  font-family: "Noto Sans";
+  font-size: 1.125em;
+  line-height: 1.5;
+  color: rgba(15, 15, 15, 0.8);
+  text-align: center;
+  margin-top: 24px;
+}
+
+.agronomistTile {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agronomistTileImage {
+  width: 132px;
+  height: 132px;
+}
+
+.agronomistTileNameAndDesignation {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.agronomistTileName {
+  font-family: "Max-Regular";
+  font-size: 1.5em;
+  line-height: 2.313em;
+  color: black;
+  letter-spacing: 0.0018px;
+}
+
+.agronomistTileDesignation {
+  font-family: "Max-Regular";
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: rgba(15, 15, 15, 0.8);
+  letter-spacing: 0.0018px;
+}
+
+.agronomistTileDescrpition {
+  font-family: "Noto Sans";
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: rgba(15, 15, 15, 0.97);
+  text-align: center;
+  margin-top: 24px;
+}
+
+.agronomistTileSeperator {
+  margin: 32px 16px 0px 16px;
+  height: 1px;
+  background-color: rgba(15, 15, 15, 0.1);
+}
+
+@media (min-width: 768px) {
+  .agronomistContainer {
+    padding: 5vw 17vw 6vw 17vw;
+  }
+  .agronoimistDetailsTitle {
+    font-size: 2.5em;
+    line-height: 1;
+    letter-spacing: 0.0018px;
+  }
+  .agronomistTileSeperator {
+    margin: 32px 100px 0px 100px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .agronomistContainer {
+    padding: 5vw 20vw 6vw 20vw;
+  }
+}
+
+.downloadDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 4vw 40px 4vw;
+  background-color: #e6f2fa;
+}
+
+.downloadDescription {
+  font-family: "Noto Sans";
+  font-size: 1.25em;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(15, 15, 15, 0.97);
+}
+
+.downloadButtonBottom {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .downloadDescriptionContainer {
+    padding: 40px 17vw 40px 17vw;
+  }
+  .downloadButtonBottom {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .downloadDescriptionContainer {
+    padding: 40px 20vw 40px 20vw;
+  }
+  .downloadButtonBottom {
+    max-width: 320px;
+  }
+}
+
+.termsAndConditionsContainer {
+  background-color: #00205b;
+  padding: 0px 4vw 0px 4vw;
+}
+
+.termsAndConditionsText {
+  margin: 32px 16px 32px 0px;
+  font-family: "Noto Sans";
+  font-size: 0.875em;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.termsButtonsContainer {
+  justify-content: flex-start;
+}
+
+.primaryAndTermsButton {
+  margin: 32px 12px 0px 0px;
+  color: white;
+  font-family: "Noto Sans";
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .termsAndConditionsContainer {
+    padding: 0px 6vw 0px 6vw;
+  }
+  .termsAndConditionsText {
+    margin: 32px 16px 64px 0px;
+  }
+  .primaryAndTermsButton {
+    margin: 32px 12px 0px 0px;
+  }
+  .termsButtonsContainer {
+    justify-content: space-between;
+    padding: 0px 0px 0px 10vw;
+  }
+}
+
+@media (min-width: 1152px) {
+  .termsAndConditionsContainer {
+    padding: 0px 18vw 0px 18vw;
+  }
+  .termsButtonsContainer {
+    justify-content: space-between;
+    padding: 0px 0px 0px 8vw;
+  }
 }

@@ -1,50 +1,143 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8" />
-        <title></title>
-        <meta name="description" content="" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-            crossorigin="anonymous"
-        />
-        <link rel="manifest" href="site.webmanifest" />
-        <link rel="apple-touch-icon" href="icon.png" />
 
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/index.css" />
+<head>
+  <meta charset="utf-8" />
+  <title>Yara farmforward</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/png" href="./img/favIcon.png" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
 
-        <meta name="theme-color" content="#fafafa" />
-    </head>
+  <meta name="theme-color" content="#fafafa" />
+  <meta name="google" content="notranslate" />
+</head>
 
-    <body>
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand">farm<span class="forward">forward</span></a>
-            <div class="languages">
-                <a class="eng">Eng</a>
-                <a class="hin">हिंदी</a>
-            </div>
-        </nav>
-
-        <div class="root-container">
-            <div class="vertically-centered main-text">
-                <div>
-                    Your potato-growing assistant that suggests weekly farming
-                    activities to help you grow more and earn more.
-                </div>
-            </div>
-            <div class="download-container">
-                <button type="button" class="btn download">
-                    <span class="button-text">Download for Android</span>
-                </button>
-            </div>
+<body>
+  <nav class="navbar navbar-light bg-light navbarPadding fixed-top">
+    <div>
+      <a href="#">
+        <img class="logoImage" src="img/yarafarmforward_logo.svg" alt="" />
+      </a>
+    </div>
+    <div>
+      <a href="?lang=en" class="eng" id="enButton">Eng</a>
+      <a href="?lang=hi" class="hin" id="hiButton">हिंदी</a>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="picContainer row">
+      <div class="col-xs-12 col-md-6 col-lg-7 detailsContainer">
+        <div class="details">
+          <p class="title" id="mainTitle"></p>
+          <a href="./release/app-Prod-release-v1.0.24.apk" target="_blank" rel="noopener noreferrer">
+            <div class="downloadButton" id="downloadButtonTop"></div>
+          </a>
         </div>
-    </body>
+      </div>
+      <div class="hidden-xs col-md-6 col-lg-5 phoneImageContainer">
+        <img src="./img/phone.png" class="phoneImage img-fluid ml-3" />
+      </div>
+    </div>
+    <div class="row tailsContainer">
+      <div class="col-xs-12 col-md-4 tail">
+        <div class="tailImageContainer">
+          <img src="img/Crop.svg" class="tailImage" />
+        </div>
+        <div class="tailTitle" id="turnYourPhoneTitle"></div>
+        <div class="tileDescription" id="turnYourPhoneDesc"></div>
+      </div>
+      <div class="col-xs-12 col-md-4 tail">
+        <div class="tailImageContainer">
+          <img src="img/profit.svg" class="tailImage" />
+        </div>
+        <div class="tailTitle" id="makeYieldTitle"></div>
+        <div class="tileDescription" id="makeYieldDesc"></div>
+      </div>
+      <div class="col-xs-12 col-md-4 tail">
+        <div class="tailImageContainer">
+          <img src="img/Reward.svg" class="tailImage" />
+        </div>
+        <div class="tailTitle" id="becomeStarTitle"></div>
+        <div class="tileDescription" id="becomeStarDesc"></div>
+      </div>
+    </div>
+    <div class="informationContainer">
+      <div class="informationTitle m-1" id="howItWorks">How it works</div>
+      <div class="informationTile">
+        <img class="informationImage" src="./img/Location.svg" />
+        <div class="information">
+          <div class="informationTileTitle" id="onYourFarmTitle"></div>
+          <div class="informationTileDescription" id="onYourFarmDesc"></div>
+        </div>
+      </div>
+      <div class="informationTile">
+        <img class="informationImage" src="./img/Weekly.svg" />
+        <div class="information">
+          <div class="informationTileTitle" id="everyWeekTitle"></div>
+          <div class="informationTileDescription" id="everyWeekDesc"></div>
+        </div>
+      </div>
+      <div class="informationTile">
+        <img class="informationImage" src="./img/Quizzes.svg" />
+        <div class="information">
+          <div class="informationTileTitle" id="throughoutSeasonTitle"></div>
+          <div class="informationTileDescription" id="throughoutSeasonDesc"></div>
+        </div>
+      </div>
+    </div>
+    <div class="agronomistContainer">
+      <div class="agronomistTile mt-0">
+        <div class="agronoimistDetailsTitle" id="whatAgronomistSayTitle"></div>
+        <div class="agronomistDetailsDescription" id="whatAgronomistSayDesc"></div>
+      </div>
+      <div class="agronomistTile">
+        <img class="agronomistTileImage" src="./img/Neeraj.jpg" />
+        <div class="agronomistTileNameAndDesignation">
+          <div class="agronomistTileName" id="neerajTitle"></div>
+          <div class="agronomistTileDesignation" id="neerajDesg"></div>
+          <div class="agronomistTileDescrpition" id="neerajDesc"></div>
+          <div class="agronomistTileSeperator"></div>
+        </div>
+      </div>
+      <div class="agronomistTile">
+        <img class="agronomistTileImage" src="./img/Swati.jpg" />
+        <div class="agronomistTileNameAndDesignation">
+          <div class="agronomistTileName" id="swathiTitle"></div>
+          <div class="agronomistTileDesignation" id="swathiDesg"></div>
+          <div class="agronomistTileDescrpition" id="swathiDesc"></div>
+        </div>
+      </div>
+    </div>
+    <div class="downloadDescriptionContainer">
+      <div class="downloadDescription" id="downloadDesc"></div>
+      <a href="./release/app-Prod-release-v1.0.24.apk" target="_blank" rel="noopener noreferrer"
+        class="downloadButtonBottom">
+        <div class="downloadButton mb-0 mt-4" id="downloadButtonBottom"></div>
+      </a>
+    </div>
+    <div class="row termsAndConditionsContainer">
+      <div class="col-xs-12 col-md-5 order-md-last d-flex flex-direction-row termsButtonsContainer">
+        <a href="https://www.yara.com/privacy-and-legal/digital-farming-privacy/" target="_blank"
+          rel="noopener noreferrer">
+          <div class="primaryAndTermsButton" id="privacyPolicy"></div>
+        </a>
+        <a href="https://www.yara.com/privacy-and-legal/digital-farming-terms/" target="_blank"
+          rel="noopener noreferrer">
+          <div class="primaryAndTermsButton" id="termsOfUse"></div>
+        </a>
+      </div>
+      <div class="col-xs-12 col-md-7 order-md-first">
+        <div class="termsAndConditionsText" id="copyRight"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="languageSelection.js"></script>
+
 </html>
